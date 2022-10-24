@@ -1,0 +1,27 @@
+plugins {
+    id "idea"
+}
+
+group "com.sumo.experiments"
+
+subprojects {
+    apply plugin: 'java'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        compile "ch.qos.logback:logback-classic:$logbackVersion"
+    }
+    jar {
+        manifest {
+            attributes(
+                "Implementation-Version": version,
+                'Build-Time': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+            )
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = gradleWrapperVersion
+}

@@ -1,0 +1,34 @@
+
+plugins {
+    id "com.zoltu.kotlin" version "1.0.2"
+    id "application"
+    id "com.github.johnrengelman.shadow" version "1.2.3"
+}
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven {
+        name 'jboss'
+        url 'http://repository.jboss.org/nexus/content/groups/public-jboss'
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    compile "org.optaplanner:optaplanner-core:$optaplannerVersion"
+    compile "org.optaplanner:optaplanner-persistence-common:$optaplannerVersion"
+    compile "org.optaplanner:optaplanner-persistence-xstream:$optaplannerVersion"
+    compile "org.optaplanner:optaplanner-benchmark:$optaplannerVersion"
+    compile "org.drools:drools-decisiontables:$droolsVersion"
+    compile "org.apache.commons:commons-lang3:3.4"
+    compile "com.thoughtworks.xstream:xstream"
+    compile "org.jfree:jcommon"
+    compile "org.jfree:jfreechart"
+    compile "org.jdom:jdom:2.0.2"
+
+}
+
+mainClassName = "org.optaplanner.examples.cloudbalancing.app.CloudBalancingApp"
