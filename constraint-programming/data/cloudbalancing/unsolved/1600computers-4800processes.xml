@@ -3406,4 +3406,145 @@
     <CloudComputer id="489">
       <id>486</id>
       <cpuPower>6</cpuPower>
-      
+      <memory>8</memory>
+      <networkBandwidth>4</networkBandwidth>
+      <cost>600</cost>
+    </CloudComputer>
+    <CloudComputer id="490">
+      <id>487</id>
+      <cpuPower>8</cpuPower>
+      <memory>16</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>870</cost>
+    </CloudComputer>
+    <CloudComputer id="491">
+      <id>488</id>
+      <cpuPower>24</cpuPower>
+      <memory>96</memory>
+      <networkBandwidth>20</networkBandwidth>
+      <cost>5000</cost>
+    </CloudComputer>
+    <CloudComputer id="492">
+      <id>489</id>
+      <cpuPower>4</cpuPower>
+      <memory>8</memory>
+      <networkBandwidth>2</networkBandwidth>
+      <cost>460</cost>
+    </CloudComputer>
+    <CloudComputer id="493">
+      <id>490</id>
+      <cpuPower>6</cpuPower>
+      <memory>16</memory>
+      <networkBandwidth>8</networkBandwidth>
+      <cost>880</cost>
+    </CloudComputer>
+    <CloudComputer id="494">
+      <id>491</id>
+      <cpuPower>8</cpuPower>
+      <memory>8</memory>
+      <networkBandwidth>8</networkBandwidth>
+      <cost>890</cost>
+    </CloudComputer>
+    <CloudComputer id="495">
+      <id>492</id>
+      <cpuPower>8</cpuPower>
+      <memory>32</memory>
+      <networkBandwidth>12</networkBandwidth>
+      <cost>1270</cost>
+    </CloudComputer>
+    <CloudComputer id="496">
+      <id>493</id>
+      <cpuPower>8</cpuPower>
+      <memory>32</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>970</cost>
+    </CloudComputer>
+    <CloudComputer id="497">
+      <id>494</id>
+      <cpuPower>16</cpuPower>
+      <memory>96</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>2300</cost>
+    </CloudComputer>
+    <CloudComputer id="498">
+      <id>495</id>
+      <cpuPower>4</cpuPower>
+      <memory>4</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>620</cost>
+    </CloudComputer>
+    <CloudComputer id="499">
+      <id>496</id>
+      <cpuPower>16</cpuPower>
+      <memory>96</memory>
+      <networkBandwidth>12</networkBandwidth>
+      <cost>2600</cost>
+    </CloudComputer>
+    <CloudComputer id="500">
+      <id>497</id>
+      <cpuPower>6</cpuPower>
+      <memory>16</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>780</cost>
+    </CloudComputer>
+    <CloudComputer id="501">
+      <id>498</id>
+      <cpuPower>6</cpuPower>
+      <memory>8</memory>
+      <networkBandwidth>4</networkBandwidth>
+      <cost>600</cost>
+    </CloudComputer>
+    <CloudComputer id="502">
+      <id>499</id>
+      <cpuPower>4</cpuPower>
+      <memory>8</memory>
+      <networkBandwidth>4</networkBandwidth>
+      <cost>560</cost>
+    </CloudComputer>
+    <CloudComputer id="503">
+      <id>500</id>
+      <cpuPower>4</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>4</networkBandwidth>
+      <cost>480</cost>
+    </CloudComputer>
+    <CloudComputer id="504">
+      <id>501</id>
+      <cpuPower>12</cpuPower>
+      <memory>64</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>1300</cost>
+    </CloudComputer>
+    <CloudComputer id="505">
+      <id>502</id>
+      <cpuPower>12</cpuPower>
+      <memory>64</memory>
+      <networkBandwidth>16</networkBandwidth>
+      <cost>1800</cost>
+    </CloudComputer>
+    <CloudComputer id="506">
+      <id>503</id>
+      <cpuPower>24</cpuPower>
+      <memory>64</memory>
+      <networkBandwidth>20</networkBandwidth>
+      <cost>4600</cost>
+    </CloudComputer>
+    <CloudComputer id="507">
+      <id>504</id>
+      <cpuPower>24</cpuPower>
+      <memory>96</memory>
+      <networkBandwidth>20</networkBandwidth>
+      <cost>5000</cost>
+    </CloudComputer>
+    <CloudComputer id="508">
+      <id>505</id>
+      <cpuPower>4</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>4</networkBandwidth>
+      <cost>480</cost>
+    </CloudComputer>
+    <CloudComputer id="509">
+      <id>506</id>
+      <cpuPower>4</cpuPower>
+      <memory>4</memory>
+      <ne
