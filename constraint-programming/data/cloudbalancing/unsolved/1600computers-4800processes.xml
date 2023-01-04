@@ -4231,4 +4231,140 @@
     </CloudComputer>
     <CloudComputer id="607">
       <id>604</id>
-      <cpuPower>3</cpu
+      <cpuPower>3</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>4</networkBandwidth>
+      <cost>450</cost>
+    </CloudComputer>
+    <CloudComputer id="608">
+      <id>605</id>
+      <cpuPower>12</cpuPower>
+      <memory>32</memory>
+      <networkBandwidth>16</networkBandwidth>
+      <cost>1600</cost>
+    </CloudComputer>
+    <CloudComputer id="609">
+      <id>606</id>
+      <cpuPower>12</cpuPower>
+      <memory>32</memory>
+      <networkBandwidth>12</networkBandwidth>
+      <cost>1400</cost>
+    </CloudComputer>
+    <CloudComputer id="610">
+      <id>607</id>
+      <cpuPower>3</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>2</networkBandwidth>
+      <cost>350</cost>
+    </CloudComputer>
+    <CloudComputer id="611">
+      <id>608</id>
+      <cpuPower>4</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>2</networkBandwidth>
+      <cost>380</cost>
+    </CloudComputer>
+    <CloudComputer id="612">
+      <id>609</id>
+      <cpuPower>8</cpuPower>
+      <memory>8</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>790</cost>
+    </CloudComputer>
+    <CloudComputer id="613">
+      <id>610</id>
+      <cpuPower>12</cpuPower>
+      <memory>32</memory>
+      <networkBandwidth>16</networkBandwidth>
+      <cost>1600</cost>
+    </CloudComputer>
+    <CloudComputer id="614">
+      <id>611</id>
+      <cpuPower>3</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>2</networkBandwidth>
+      <cost>350</cost>
+    </CloudComputer>
+    <CloudComputer id="615">
+      <id>612</id>
+      <cpuPower>8</cpuPower>
+      <memory>16</memory>
+      <networkBandwidth>8</networkBandwidth>
+      <cost>970</cost>
+    </CloudComputer>
+    <CloudComputer id="616">
+      <id>613</id>
+      <cpuPower>3</cpuPower>
+      <memory>4</memory>
+      <networkBandwidth>2</networkBandwidth>
+      <cost>390</cost>
+    </CloudComputer>
+    <CloudComputer id="617">
+      <id>614</id>
+      <cpuPower>6</cpuPower>
+      <memory>4</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>660</cost>
+    </CloudComputer>
+    <CloudComputer id="618">
+      <id>615</id>
+      <cpuPower>4</cpuPower>
+      <memory>16</memory>
+      <networkBandwidth>4</networkBandwidth>
+      <cost>640</cost>
+    </CloudComputer>
+    <CloudComputer id="619">
+      <id>616</id>
+      <cpuPower>12</cpuPower>
+      <memory>16</memory>
+      <networkBandwidth>12</networkBandwidth>
+      <cost>1300</cost>
+    </CloudComputer>
+    <CloudComputer id="620">
+      <id>617</id>
+      <cpuPower>3</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>2</networkBandwidth>
+      <cost>350</cost>
+    </CloudComputer>
+    <CloudComputer id="621">
+      <id>618</id>
+      <cpuPower>16</cpuPower>
+      <memory>32</memory>
+      <networkBandwidth>16</networkBandwidth>
+      <cost>2200</cost>
+    </CloudComputer>
+    <CloudComputer id="622">
+      <id>619</id>
+      <cpuPower>24</cpuPower>
+      <memory>64</memory>
+      <networkBandwidth>20</networkBandwidth>
+      <cost>4600</cost>
+    </CloudComputer>
+    <CloudComputer id="623">
+      <id>620</id>
+      <cpuPower>6</cpuPower>
+      <memory>4</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>660</cost>
+    </CloudComputer>
+    <CloudComputer id="624">
+      <id>621</id>
+      <cpuPower>6</cpuPower>
+      <memory>4</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>660</cost>
+    </CloudComputer>
+    <CloudComputer id="625">
+      <id>622</id>
+      <cpuPower>8</cpuPower>
+      <memory>32</memory>
+      <networkBandwidth>8</networkBandwidth>
+      <cost>1070</cost>
+    </CloudComputer>
+    <CloudComputer id="626">
+      <id>623</id>
+      <cpuPower>3</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>2</networkBandwidth>
+    
