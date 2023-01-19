@@ -5332,4 +5332,144 @@
       <id>761</id>
       <cpuPower>4</cpuPower>
       <memory>4</memory>
-     
+      <networkBandwidth>4</networkBandwidth>
+      <cost>520</cost>
+    </CloudComputer>
+    <CloudComputer id="765">
+      <id>762</id>
+      <cpuPower>3</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>550</cost>
+    </CloudComputer>
+    <CloudComputer id="766">
+      <id>763</id>
+      <cpuPower>4</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>4</networkBandwidth>
+      <cost>480</cost>
+    </CloudComputer>
+    <CloudComputer id="767">
+      <id>764</id>
+      <cpuPower>16</cpuPower>
+      <memory>96</memory>
+      <networkBandwidth>12</networkBandwidth>
+      <cost>2600</cost>
+    </CloudComputer>
+    <CloudComputer id="768">
+      <id>765</id>
+      <cpuPower>16</cpuPower>
+      <memory>64</memory>
+      <networkBandwidth>12</networkBandwidth>
+      <cost>2200</cost>
+    </CloudComputer>
+    <CloudComputer id="769">
+      <id>766</id>
+      <cpuPower>3</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>2</networkBandwidth>
+      <cost>350</cost>
+    </CloudComputer>
+    <CloudComputer id="770">
+      <id>767</id>
+      <cpuPower>16</cpuPower>
+      <memory>96</memory>
+      <networkBandwidth>16</networkBandwidth>
+      <cost>2800</cost>
+    </CloudComputer>
+    <CloudComputer id="771">
+      <id>768</id>
+      <cpuPower>24</cpuPower>
+      <memory>96</memory>
+      <networkBandwidth>20</networkBandwidth>
+      <cost>5000</cost>
+    </CloudComputer>
+    <CloudComputer id="772">
+      <id>769</id>
+      <cpuPower>4</cpuPower>
+      <memory>4</memory>
+      <networkBandwidth>4</networkBandwidth>
+      <cost>520</cost>
+    </CloudComputer>
+    <CloudComputer id="773">
+      <id>770</id>
+      <cpuPower>4</cpuPower>
+      <memory>4</memory>
+      <networkBandwidth>4</networkBandwidth>
+      <cost>520</cost>
+    </CloudComputer>
+    <CloudComputer id="774">
+      <id>771</id>
+      <cpuPower>3</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>550</cost>
+    </CloudComputer>
+    <CloudComputer id="775">
+      <id>772</id>
+      <cpuPower>3</cpuPower>
+      <memory>2</memory>
+      <networkBandwidth>2</networkBandwidth>
+      <cost>350</cost>
+    </CloudComputer>
+    <CloudComputer id="776">
+      <id>773</id>
+      <cpuPower>6</cpuPower>
+      <memory>8</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>700</cost>
+    </CloudComputer>
+    <CloudComputer id="777">
+      <id>774</id>
+      <cpuPower>8</cpuPower>
+      <memory>4</memory>
+      <networkBandwidth>6</networkBandwidth>
+      <cost>750</cost>
+    </CloudComputer>
+    <CloudComputer id="778">
+      <id>775</id>
+      <cpuPower>4</cpuPower>
+      <memory>4</memory>
+      <networkBandwidth>2</networkBandwidth>
+      <cost>420</cost>
+    </CloudComputer>
+    <CloudComputer id="779">
+      <id>776</id>
+      <cpuPower>12</cpuPower>
+      <memory>16</memory>
+      <networkBandwidth>16</networkBandwidth>
+      <cost>1500</cost>
+    </CloudComputer>
+    <CloudComputer id="780">
+      <id>777</id>
+      <cpuPower>24</cpuPower>
+      <memory>96</memory>
+      <networkBandwidth>20</networkBandwidth>
+      <cost>5000</cost>
+    </CloudComputer>
+    <CloudComputer id="781">
+      <id>778</id>
+      <cpuPower>12</cpuPower>
+      <memory>32</memory>
+      <networkBandwidth>16</networkBandwidth>
+      <cost>1600</cost>
+    </CloudComputer>
+    <CloudComputer id="782">
+      <id>779</id>
+      <cpuPower>6</cpuPower>
+      <memory>8</memory>
+      <networkBandwidth>8</networkBandwidth>
+      <cost>800</cost>
+    </CloudComputer>
+    <CloudComputer id="783">
+      <id>780</id>
+      <cpuPower>8</cpuPower>
+      <memory>32</memory>
+      <networkBandwidth>8</networkBandwidth>
+      <cost>1070</cost>
+    </CloudComputer>
+    <CloudComputer id="784">
+      <id>781</id>
+      <cpuPower>24</cpuPower>
+      <memory>96</memory>
+      <n
