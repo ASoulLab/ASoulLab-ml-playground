@@ -13709,4 +13709,111 @@
       <id>417</id>
       <requiredCpuPower>5</requiredCpuPower>
       <requiredMemory>1</requiredMemory>
-      <requir
+      <requiredNetworkBandwidth>4</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2022">
+      <id>418</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>3</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2023">
+      <id>419</id>
+      <requiredCpuPower>7</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2024">
+      <id>420</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2025">
+      <id>421</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>12</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2026">
+      <id>422</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>20</requiredMemory>
+      <requiredNetworkBandwidth>9</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2027">
+      <id>423</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>14</requiredMemory>
+      <requiredNetworkBandwidth>5</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2028">
+      <id>424</id>
+      <requiredCpuPower>2</requiredCpuPower>
+      <requiredMemory>3</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2029">
+      <id>425</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2030">
+      <id>426</id>
+      <requiredCpuPower>5</requiredCpuPower>
+      <requiredMemory>2</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2031">
+      <id>427</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2032">
+      <id>428</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2033">
+      <id>429</id>
+      <requiredCpuPower>2</requiredCpuPower>
+      <requiredMemory>2</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2034">
+      <id>430</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2035">
+      <id>431</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>3</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2036">
+      <id>432</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>10</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2037">
+      <id>433</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>3</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2038">
+      <id>434</id>
+      <requiredCpuPower>4</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>5</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2039">
+      <id>435</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>14
