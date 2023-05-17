@@ -18661,4 +18661,110 @@
       <requiredMemory>17</requiredMemory>
       <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
     </CloudProcess>
-    
+    <CloudProcess id="2847">
+      <id>1243</id>
+      <requiredCpuPower>7</requiredCpuPower>
+      <requiredMemory>15</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2848">
+      <id>1244</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2849">
+      <id>1245</id>
+      <requiredCpuPower>3</requiredCpuPower>
+      <requiredMemory>8</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2850">
+      <id>1246</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2851">
+      <id>1247</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2852">
+      <id>1248</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2853">
+      <id>1249</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2854">
+      <id>1250</id>
+      <requiredCpuPower>4</requiredCpuPower>
+      <requiredMemory>5</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2855">
+      <id>1251</id>
+      <requiredCpuPower>8</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2856">
+      <id>1252</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>31</requiredMemory>
+      <requiredNetworkBandwidth>4</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2857">
+      <id>1253</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>3</requiredMemory>
+      <requiredNetworkBandwidth>10</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2858">
+      <id>1254</id>
+      <requiredCpuPower>12</requiredCpuPower>
+      <requiredMemory>2</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2859">
+      <id>1255</id>
+      <requiredCpuPower>2</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2860">
+      <id>1256</id>
+      <requiredCpuPower>2</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2861">
+      <id>1257</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>2</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2862">
+      <id>1258</id>
+      <requiredCpuPower>4</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>5</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2863">
+      <id>1259</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>2</requiredMemory>
+      <requiredNetworkBandwidth>3</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="2864">
+      <id>1260</id>
+      <requiredCpuPower>3</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwid
