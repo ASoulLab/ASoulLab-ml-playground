@@ -21695,4 +21695,108 @@
       <id>1748</id>
       <requiredCpuPower>3</requiredCpuPower>
       <requiredMemory>5</requiredMemory>
-      <requiredNetworkBandw
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3353">
+      <id>1749</id>
+      <requiredCpuPower>3</requiredCpuPower>
+      <requiredMemory>31</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3354">
+      <id>1750</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>3</requiredMemory>
+      <requiredNetworkBandwidth>7</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3355">
+      <id>1751</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>6</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3356">
+      <id>1752</id>
+      <requiredCpuPower>4</requiredCpuPower>
+      <requiredMemory>11</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3357">
+      <id>1753</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>16</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3358">
+      <id>1754</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3359">
+      <id>1755</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3360">
+      <id>1756</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>14</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3361">
+      <id>1757</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3362">
+      <id>1758</id>
+      <requiredCpuPower>4</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3363">
+      <id>1759</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>19</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3364">
+      <id>1760</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3365">
+      <id>1761</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>3</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3366">
+      <id>1762</id>
+      <requiredCpuPower>2</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3367">
+      <id>1763</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3368">
+      <id>1764</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>7</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="3369">
+      <id>1765</id>
+      <requiredCpuPower>4</requiredCpuPower>
+      <requiredMemory>9</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+ 
