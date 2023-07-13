@@ -26079,4 +26079,112 @@
     </CloudProcess>
     <CloudProcess id="4083">
       <id>2479</id>
-      <requiredCpuPower>3</
+      <requiredCpuPower>3</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4084">
+      <id>2480</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>6</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4085">
+      <id>2481</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>14</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4086">
+      <id>2482</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>8</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4087">
+      <id>2483</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>11</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4088">
+      <id>2484</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>8</requiredMemory>
+      <requiredNetworkBandwidth>4</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4089">
+      <id>2485</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>11</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4090">
+      <id>2486</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4091">
+      <id>2487</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>2</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4092">
+      <id>2488</id>
+      <requiredCpuPower>3</requiredCpuPower>
+      <requiredMemory>21</requiredMemory>
+      <requiredNetworkBandwidth>11</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4093">
+      <id>2489</id>
+      <requiredCpuPower>2</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4094">
+      <id>2490</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>2</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4095">
+      <id>2491</id>
+      <requiredCpuPower>6</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4096">
+      <id>2492</id>
+      <requiredCpuPower>3</requiredCpuPower>
+      <requiredMemory>3</requiredMemory>
+      <requiredNetworkBandwidth>3</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4097">
+      <id>2493</id>
+      <requiredCpuPower>8</requiredCpuPower>
+      <requiredMemory>2</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4098">
+      <id>2494</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>5</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4099">
+      <id>2495</id>
+      <requiredCpuPower>11</requiredCpuPower>
+      <requiredMemory>32</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4100">
+      <id>2496</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="4101">
+      <id>2497</id>
+     
