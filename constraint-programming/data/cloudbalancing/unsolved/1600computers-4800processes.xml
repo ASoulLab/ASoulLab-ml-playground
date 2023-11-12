@@ -37685,4 +37685,111 @@
       <id>4413</id>
       <requiredCpuPower>1</requiredCpuPower>
       <requiredMemory>1</requiredMemory>
-      <requiredNetworkBandwidth>1</requiredNetworkB
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6018">
+      <id>4414</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6019">
+      <id>4415</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>9</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6020">
+      <id>4416</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>22</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6021">
+      <id>4417</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>15</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6022">
+      <id>4418</id>
+      <requiredCpuPower>5</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6023">
+      <id>4419</id>
+      <requiredCpuPower>9</requiredCpuPower>
+      <requiredMemory>3</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6024">
+      <id>4420</id>
+      <requiredCpuPower>7</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6025">
+      <id>4421</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>6</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6026">
+      <id>4422</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6027">
+      <id>4423</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6028">
+      <id>4424</id>
+      <requiredCpuPower>4</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>2</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6029">
+      <id>4425</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6030">
+      <id>4426</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>7</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6031">
+      <id>4427</id>
+      <requiredCpuPower>4</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6032">
+      <id>4428</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>3</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6033">
+      <id>4429</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>6</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6034">
+      <id>4430</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>2</requiredMemory>
+      <requiredNetworkBandwidth>3</requiredNetworkBandwidth>
+    </CloudProcess>
+    <CloudProcess id="6035">
+      <id>4431</id>
+      <requiredCpuPower>1</requiredCpuPower>
+ 
