@@ -39999,4 +39999,9 @@
     </CloudProcess>
     <CloudProcess id="6403">
       <id>4799</id>
-      <req
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+  </processList>
+</CloudBalance>
