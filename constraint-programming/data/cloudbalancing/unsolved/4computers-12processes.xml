@@ -97,4 +97,11 @@
       <requiredMemory>3</requiredMemory>
       <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
     </CloudProcess>
-    <CloudProcess
+    <CloudProcess id="19">
+      <id>11</id>
+      <requiredCpuPower>1</requiredCpuPower>
+      <requiredMemory>1</requiredMemory>
+      <requiredNetworkBandwidth>1</requiredNetworkBandwidth>
+    </CloudProcess>
+  </processList>
+</CloudBalance>
