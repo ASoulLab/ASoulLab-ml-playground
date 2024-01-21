@@ -20,13 +20,12 @@ import java.io.Serializable
 import java.util.Comparator
 
 import org.apache.commons.lang3.builder.CompareToBuilder
-import org.optaplanner.examples.cloudbalancing.domain.CloudComputer
+import org.optaplanner.examples.cloudbalancing.domain.CloudProcess
 
-class CloudComputerStrengthComparator : Comparator<CloudComputer>, Serializable {
+class CloudProcessDifficultyComparator : Comparator<CloudProcess>, Serializable {
 
-    override fun compare(a: CloudComputer, b: CloudComputer): Int {
-        return CompareToBuilder().append(a.multiplicand, b.multiplicand).append(b.cost, a.cost) // Descending (but this is debatable)
-                .append(a.id, b.id).toComparison()
+    override fun compare(a: CloudProcess, b: CloudProcess): Int {
+        return CompareToBuilder().append(a.requiredMultiplicand, b.requiredMultiplicand).append(a.id, b.id).toComparison()
     }
 
 }

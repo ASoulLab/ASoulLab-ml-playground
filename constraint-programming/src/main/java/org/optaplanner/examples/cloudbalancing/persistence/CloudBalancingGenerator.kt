@@ -14,19 +14,16 @@
  * limitations under the License.
  */
 
-package org.optaplanner.examples.cloudbalancing.domain.solver
+package org.optaplanner.examples.cloudbalancing.persistence
 
-import java.io.Serializable
-import java.util.Comparator
+import java.io.File
+import java.math.BigInteger
+import java.util.ArrayList
+import java.util.Random
 
-import org.apache.commons.lang3.builder.CompareToBuilder
+import org.optaplanner.examples.cloudbalancing.domain.CloudBalance
 import org.optaplanner.examples.cloudbalancing.domain.CloudComputer
-
-class CloudComputerStrengthComparator : Comparator<CloudComputer>, Serializable {
-
-    override fun compare(a: CloudComputer, b: CloudComputer): Int {
-        return CompareToBuilder().append(a.multiplicand, b.multiplicand).append(b.cost, a.cost) // Descending (but this is debatable)
-                .append(a.id, b.id).toComparison()
-    }
-
-}
+import org.optaplanner.examples.cloudbalancing.domain.CloudProcess
+import org.optaplanner.examples.common.app.LoggingMain
+import org.optaplanner.examples.common.persistence.AbstractSolutionImporter
+import org.optaplanner.examples.common.persiste
