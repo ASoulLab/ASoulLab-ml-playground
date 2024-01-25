@@ -9,4 +9,36 @@
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.optaplanner.examples.cloudbalancing.solver.move.factory
+
+import java.util.ArrayList
+
+import org.optaplanner.core.impl.heuristic.move.Move
+import org.optaplanner.core.impl.heuristic.selector.move.factory.MoveListFactory
+import org.optaplanner.examples.cloudbalancing.domain.CloudBalance
+import org.optaplanner.examples.cloudbalancing.domain.CloudProcess
+import org.optaplanner.examples.cloudbalancing.solver.move.CloudProcessSwapMove
+
+class CloudProcessSwapMoveFactory : MoveListFactory<CloudBalance> {
+
+    override fun createMoveList(cloudBalance: CloudBalance): List<Move> {
+        val cloudProcessList = cloudBalance.processList
+        val moveList = ArrayList<Move>()
+        val leftIt = cloudProcessList!!.listIterator()
+        while (leftIt.hasNext()) {
+            val leftCloudProcess = leftIt.next()
+            val rightIt = cloudProcessList.listIterator(leftIt.nextIndex())
+            while (rightIt.hasNext()) {
+                val rightCloudProcess = rightIt.next()
+                moveList.add(CloudProcessSwapMove(leftCloudProcess, rightCloudProcess))
+            }
+        }
+        return moveList
+    }
+
+}
