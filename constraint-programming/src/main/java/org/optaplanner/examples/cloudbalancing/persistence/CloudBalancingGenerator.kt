@@ -194,4 +194,64 @@ class CloudBalancingGenerator : LoggingMain {
         for (computer in computerList!!) {
             cpuPowerTotal += computer.cpuPower
             memoryTotal += computer.memory
-            networkBandwidthTotal += comput
+            networkBandwidthTotal += computer.networkBandwidth
+        }
+        var requiredCpuPowerTotal = 0
+        var requiredMemoryTotal = 0
+        var requiredNetworkBandwidthTotal = 0
+        for (process in cloudBalance.processList!!) {
+            requiredCpuPowerTotal += process.requiredCpuPower
+            requiredMemoryTotal += process.requiredMemory
+            requiredNetworkBandwidthTotal += process.requiredNetworkBandwidth
+        }
+        var cpuPowerLacking = requiredCpuPowerTotal - cpuPowerTotal
+        while (cpuPowerLacking > 0) {
+            val computer = computerList[random.nextInt(computerList.size)]
+            val upgrade = determineUpgrade(cpuPowerLacking)
+            computer.cpuPower = computer.cpuPower + upgrade
+            cpuPowerLacking -= upgrade
+        }
+        var memoryLacking = requiredMemoryTotal - memoryTotal
+        while (memoryLacking > 0) {
+            val computer = computerList[random.nextInt(computerList.size)]
+            val upgrade = determineUpgrade(memoryLacking)
+            computer.memory = computer.memory + upgrade
+            memoryLacking -= upgrade
+        }
+        var networkBandwidthLacking = requiredNetworkBandwidthTotal - networkBandwidthTotal
+        while (networkBandwidthLacking > 0) {
+            val computer = computerList[random.nextInt(computerList.size)]
+            val upgrade = determineUpgrade(networkBandwidthLacking)
+            computer.networkBandwidth = computer.networkBandwidth + upgrade
+            networkBandwidthLacking -= upgrade
+        }
+    }
+
+    private fun determineUpgrade(lacking: Int): Int {
+        for (upgrade in intArrayOf(8, 4, 2, 1)) {
+            if (lacking >= upgrade) {
+                return upgrade
+            }
+        }
+        throw IllegalStateException("Lacking ($lacking) should be at least 1.")
+    }
+
+    companion object {
+
+        private val CPU_POWER_PRICES = arrayOf(// in gigahertz
+                Price(3, "single core 3ghz", 110), Price(4, "dual core 2ghz", 140), Price(6, "dual core 3ghz", 180), Price(8, "quad core 2ghz", 270), Price(12, "quad core 3ghz", 400), Price(16, "quad core 4ghz", 1000), Price(24, "eight core 3ghz", 3000))
+        private val MEMORY_PRICES = arrayOf(// in gigabyte RAM
+                Price(2, "2 gigabyte", 140), Price(4, "4 gigabyte", 180), Price(8, "8 gigabyte", 220), Price(16, "16 gigabyte", 300), Price(32, "32 gigabyte", 400), Price(64, "64 gigabyte", 600), Price(96, "96 gigabyte", 1000))
+        private val NETWORK_BANDWIDTH_PRICES = arrayOf(// in gigabyte per hour
+                Price(2, "2 gigabyte", 100), Price(4, "4 gigabyte", 200), Price(6, "6 gigabyte", 300), Price(8, "8 gigabyte", 400), Price(12, "12 gigabyte", 600), Price(16, "16 gigabyte", 800), Price(20, "20 gigabyte", 1000))
+
+        private val MAXIMUM_REQUIRED_CPU_POWER = 12 // in gigahertz
+        private val MAXIMUM_REQUIRED_MEMORY = 32 // in gigabyte RAM
+        private val MAXIMUM_REQUIRED_NETWORK_BANDWIDTH = 12 // in gigabyte per hour
+
+        @JvmStatic fun main(args: Array<String>) {
+            CloudBalancingGenerator().generate()
+        }
+    }
+
+}
