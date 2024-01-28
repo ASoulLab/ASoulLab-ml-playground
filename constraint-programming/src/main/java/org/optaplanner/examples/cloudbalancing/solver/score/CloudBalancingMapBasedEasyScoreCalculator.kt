@@ -37,3 +37,69 @@ class CloudBalancingMapBasedEasyScoreCalculator : EasyScoreCalculator<CloudBalan
             cpuPowerUsageMap.put(computer, 0)
             memoryUsageMap.put(computer, 0)
             networkBandwidthUsageMap.put(computer, 0)
+        }
+        val usedComputerSet = HashSet<CloudComputer>(computerListSize)
+
+        visitProcessList(cpuPowerUsageMap, memoryUsageMap, networkBandwidthUsageMap,
+                usedComputerSet, cloudBalance.processList!!)
+
+        val hardScore = sumHardScore(cpuPowerUsageMap, memoryUsageMap, networkBandwidthUsageMap)
+        val softScore = sumSoftScore(usedComputerSet)
+
+        return HardSoftScore.valueOf(hardScore, softScore)
+    }
+
+    private fun visitProcessList(cpuPowerUsageMap: MutableMap<CloudComputer, Int>,
+                                 memoryUsageMap: MutableMap<CloudComputer, Int>, networkBandwidthUsageMap: MutableMap<CloudComputer, Int>,
+                                 usedComputerSet: MutableSet<CloudComputer>, processList: List<CloudProcess>) {
+        // We loop through the processList only once for performance
+        for (process in processList) {
+            val computer = process.computer
+            if (computer != null) {
+                val cpuPowerUsage = cpuPowerUsageMap[computer]!! + process.requiredCpuPower
+                cpuPowerUsageMap.put(computer, cpuPowerUsage)
+                val memoryUsage = memoryUsageMap[computer]!! + process.requiredMemory
+                memoryUsageMap.put(computer, memoryUsage)
+                val networkBandwidthUsage = networkBandwidthUsageMap[computer]!! + process.requiredNetworkBandwidth
+                networkBandwidthUsageMap.put(computer, networkBandwidthUsage)
+                usedComputerSet.add(computer)
+            }
+        }
+    }
+
+    private fun sumHardScore(cpuPowerUsageMap: Map<CloudComputer, Int>, memoryUsageMap: Map<CloudComputer, Int>,
+                             networkBandwidthUsageMap: Map<CloudComputer, Int>): Int {
+        var hardScore = 0
+        for (usageEntry in cpuPowerUsageMap.entries) {
+            val computer = usageEntry.key
+            val cpuPowerAvailable = computer.cpuPower - usageEntry.value
+            if (cpuPowerAvailable < 0) {
+                hardScore += cpuPowerAvailable
+            }
+        }
+        for (usageEntry in memoryUsageMap.entries) {
+            val computer = usageEntry.key
+            val memoryAvailable = computer.memory - usageEntry.value
+            if (memoryAvailable < 0) {
+                hardScore += memoryAvailable
+            }
+        }
+        for (usageEntry in networkBandwidthUsageMap.entries) {
+            val computer = usageEntry.key
+            val networkBandwidthAvailable = computer.networkBandwidth - usageEntry.value
+            if (networkBandwidthAvailable < 0) {
+                hardScore += networkBandwidthAvailable
+            }
+        }
+        return hardScore
+    }
+
+    private fun sumSoftScore(usedComputerSet: Set<CloudComputer>): Int {
+        var softScore = 0
+        for (usedComputer in usedComputerSet) {
+            softScore -= usedComputer.cost
+        }
+        return softScore
+    }
+
+}
