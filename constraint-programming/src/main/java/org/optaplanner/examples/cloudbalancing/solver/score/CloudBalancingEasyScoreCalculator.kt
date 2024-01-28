@@ -56,4 +56,17 @@ class CloudBalancingEasyScoreCalculator : EasyScoreCalculator<CloudBalance> {
             if (memoryAvailable < 0) {
                 hardScore += memoryAvailable
             }
-            val networkBandwidthAvailable
+            val networkBandwidthAvailable = computer.networkBandwidth - networkBandwidthUsage
+            if (networkBandwidthAvailable < 0) {
+                hardScore += networkBandwidthAvailable
+            }
+
+            // Soft constraints
+            if (used) {
+                softScore -= computer.cost
+            }
+        }
+        return HardSoftScore.valueOf(hardScore, softScore)
+    }
+
+}
