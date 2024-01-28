@@ -85,3 +85,74 @@ class CloudBalancingIncrementalScoreCalculator : AbstractIncrementalScoreCalcula
             val cpuPower = computer.cpuPower
             val oldCpuPowerUsage = cpuPowerUsageMap!![computer]
             val oldCpuPowerAvailable = cpuPower - oldCpuPowerUsage!!
+            val newCpuPowerUsage = oldCpuPowerUsage + process.requiredCpuPower
+            val newCpuPowerAvailable = cpuPower - newCpuPowerUsage
+            hardScore += Math.min(newCpuPowerAvailable, 0) - Math.min(oldCpuPowerAvailable, 0)
+            cpuPowerUsageMap!!.put(computer, newCpuPowerUsage)
+
+            val memory = computer.memory
+            val oldMemoryUsage = memoryUsageMap!![computer]
+            val oldMemoryAvailable = memory - oldMemoryUsage!!
+            val newMemoryUsage = oldMemoryUsage + process.requiredMemory
+            val newMemoryAvailable = memory - newMemoryUsage
+            hardScore += Math.min(newMemoryAvailable, 0) - Math.min(oldMemoryAvailable, 0)
+            memoryUsageMap!!.put(computer, newMemoryUsage)
+
+            val networkBandwidth = computer.networkBandwidth
+            val oldNetworkBandwidthUsage = networkBandwidthUsageMap!![computer]
+            val oldNetworkBandwidthAvailable = networkBandwidth - oldNetworkBandwidthUsage!!
+            val newNetworkBandwidthUsage = oldNetworkBandwidthUsage + process.requiredNetworkBandwidth
+            val newNetworkBandwidthAvailable = networkBandwidth - newNetworkBandwidthUsage
+            hardScore += Math.min(newNetworkBandwidthAvailable, 0) - Math.min(oldNetworkBandwidthAvailable, 0)
+            networkBandwidthUsageMap!!.put(computer, newNetworkBandwidthUsage)
+
+            val oldProcessCount = processCountMap!![computer]
+            if (oldProcessCount == 0) {
+                softScore -= computer.cost
+            }
+            val newProcessCount = oldProcessCount!! + 1
+            processCountMap!!.put(computer, newProcessCount)
+        }
+    }
+
+    private fun retract(process: CloudProcess) {
+        val computer = process.computer
+        if (computer != null) {
+            val cpuPower = computer.cpuPower
+            val oldCpuPowerUsage = cpuPowerUsageMap!![computer]
+            val oldCpuPowerAvailable = cpuPower - oldCpuPowerUsage!!
+            val newCpuPowerUsage = oldCpuPowerUsage - process.requiredCpuPower
+            val newCpuPowerAvailable = cpuPower - newCpuPowerUsage
+            hardScore += Math.min(newCpuPowerAvailable, 0) - Math.min(oldCpuPowerAvailable, 0)
+            cpuPowerUsageMap!!.put(computer, newCpuPowerUsage)
+
+            val memory = computer.memory
+            val oldMemoryUsage = memoryUsageMap!![computer]
+            val oldMemoryAvailable = memory - oldMemoryUsage!!
+            val newMemoryUsage = oldMemoryUsage - process.requiredMemory
+            val newMemoryAvailable = memory - newMemoryUsage
+            hardScore += Math.min(newMemoryAvailable, 0) - Math.min(oldMemoryAvailable, 0)
+            memoryUsageMap!!.put(computer, newMemoryUsage)
+
+            val networkBandwidth = computer.networkBandwidth
+            val oldNetworkBandwidthUsage = networkBandwidthUsageMap!![computer]
+            val oldNetworkBandwidthAvailable = networkBandwidth - oldNetworkBandwidthUsage!!
+            val newNetworkBandwidthUsage = oldNetworkBandwidthUsage - process.requiredNetworkBandwidth
+            val newNetworkBandwidthAvailable = networkBandwidth - newNetworkBandwidthUsage
+            hardScore += Math.min(newNetworkBandwidthAvailable, 0) - Math.min(oldNetworkBandwidthAvailable, 0)
+            networkBandwidthUsageMap!!.put(computer, newNetworkBandwidthUsage)
+
+            val oldProcessCount = processCountMap!![computer]
+            val newProcessCount = oldProcessCount!! - 1
+            if (newProcessCount == 0) {
+                softScore += computer.cost
+            }
+            processCountMap!!.put(computer, newProcessCount)
+        }
+    }
+
+    override fun calculateScore(): HardSoftScore {
+        return HardSoftScore.valueOf(hardScore, softScore)
+    }
+
+}
