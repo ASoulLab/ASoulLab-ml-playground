@@ -65,4 +65,54 @@ public abstract class CommonBenchmarkApp extends LoggingMain {
         }
         PlannerBenchmarkFactory plannerBenchmarkFactory = argOption.buildPlannerBenchmarkFactory();
         if (!aggregator) {
-            PlannerBenchmark plannerBench
+            PlannerBenchmark plannerBenchmark = plannerBenchmarkFactory.buildPlannerBenchmark();
+            plannerBenchmark.benchmark();
+        } else {
+            BenchmarkAggregatorFrame.createAndDisplay(plannerBenchmarkFactory);
+        }
+    }
+
+    public static class ArgOption {
+
+        private String name;
+        private String benchmarkConfig;
+        private boolean template;
+
+        public ArgOption(String name, String benchmarkConfig) {
+            this(name, benchmarkConfig, false);
+        }
+
+        public ArgOption(String name, String benchmarkConfig, boolean template) {
+            this.name = name;
+            this.benchmarkConfig = benchmarkConfig;
+            this.template = template;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getBenchmarkConfig() {
+            return benchmarkConfig;
+        }
+
+        public boolean isTemplate() {
+            return template;
+        }
+
+        public PlannerBenchmarkFactory buildPlannerBenchmarkFactory() {
+            if (!template) {
+                return PlannerBenchmarkFactory.createFromXmlResource(benchmarkConfig);
+            } else {
+                return PlannerBenchmarkFactory.createFromFreemarkerXmlResource(benchmarkConfig);
+            }
+        }
+
+        @Override
+        public String toString() {
+            return name + " (" + benchmarkConfig + ")";
+        }
+
+    }
+
+}
