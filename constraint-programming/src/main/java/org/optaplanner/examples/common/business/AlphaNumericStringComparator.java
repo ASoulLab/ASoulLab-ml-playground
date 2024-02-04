@@ -43,4 +43,36 @@ public class AlphaNumericStringComparator implements Comparator<String>, Seriali
             char bChar = bChars[bIndex];
             if (isDigit(aChar) && isDigit(bChar)) {
                 int aIndexTo = aIndex + 1;
-                while (aIndexTo < aChars.length && i
+                while (aIndexTo < aChars.length && isDigit(aChars[aIndexTo])) {
+                    aIndexTo++;
+                }
+                int bIndexTo = bIndex + 1;
+                while (bIndexTo < bChars.length && isDigit(bChars[bIndexTo])) {
+                    bIndexTo++;
+                }
+                int aNumber = Integer.parseInt(new String(aChars, aIndex, aIndexTo - aIndex));
+                int bNumber = Integer.parseInt(new String(bChars, bIndex, bIndexTo - bIndex));
+                if (aNumber < bNumber) {
+                    return -1;
+                } else if (aNumber > bNumber) {
+                    return 1;
+                }
+                aIndex = aIndexTo;
+                bIndex = bIndexTo;
+            } else {
+                if (aChar < bChar) {
+                    return -1;
+                } else if (aChar > bChar) {
+                    return 1;
+                }
+                aIndex++;
+                bIndex++;
+            }
+        }
+    }
+
+    private boolean isDigit(char aChar) {
+        return aChar >= '0' && aChar <= '9';
+    }
+
+}
