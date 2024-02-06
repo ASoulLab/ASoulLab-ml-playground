@@ -125,4 +125,36 @@ public abstract class AbstractXlsxSolutionImporter extends AbstractSolutionImpor
             return l;
         }
 
-        protected double 
+        protected double readDoubleCell(Cell cell) {
+            return cell.getNumericCellValue();
+        }
+
+        protected String readStringCell(Cell cell) {
+            return cell.getStringCellValue();
+        }
+
+        protected String readStringParameter(Row row, String key) {
+            Cell keyCell = row.getCell(0);
+            if (!key.equals(keyCell.getStringCellValue())) {
+                throw new IllegalArgumentException("The keyCell (" + keyCell.getRow().getRowNum() + ","
+                        + keyCell.getColumnIndex() + ") with value (" + keyCell.getStringCellValue()
+                        + ") is expected to have the key (" + key + ")");
+            }
+            Cell valueCell = row.getCell(1);
+            return valueCell.getStringCellValue();
+        }
+
+        protected double readDoubleParameter(Row row, String key) {
+            Cell keyCell = row.getCell(0);
+            if (!key.equals(keyCell.getStringCellValue())) {
+                throw new IllegalArgumentException("The keyCell (" + keyCell.getRow().getRowNum() + ","
+                        + keyCell.getColumnIndex() + ") with value (" + keyCell.getStringCellValue()
+                        + ") is expected to have the key (" + key + ")");
+            }
+            Cell valueCell = row.getCell(1);
+            return valueCell.getNumericCellValue();
+        }
+
+    }
+
+}
