@@ -25,4 +25,104 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.optaplanner.core.api.domain.solution.Solution;
+
+public abstract class AbstractXlsxSolutionImporter extends AbstractSolutionImporter {
+
+    private static final String DEFAULT_INPUT_FILE_SUFFIX = "xlsx";
+
+    protected AbstractXlsxSolutionImporter(SolutionDao solutionDao) {
+        super(solutionDao);
+    }
+
+    protected AbstractXlsxSolutionImporter(boolean withoutDao) {
+        super(withoutDao);
+    }
+
+    public String getInputFileSuffix() {
+        return DEFAULT_INPUT_FILE_SUFFIX;
+    }
+
+    public abstract XslxInputBuilder createXslxInputBuilder();
+
+    public Solution readSolution(File inputFile) {
+        Solution solution;
+        InputStream in = null;
+        try {
+            in = new FileInputStream(inputFile);
+            XSSFWorkbook workbook = new XSSFWorkbook(in);
+            XslxInputBuilder xlsxInputBuilder = createXslxInputBuilder();
+            xlsxInputBuilder.setInputFile(inputFile);
+            xlsxInputBuilder.setWorkbook(workbook);
+            try {
+                solution = xlsxInputBuilder.readSolution();
+            } catch (IllegalArgumentException e) {
+                throw new IllegalArgumentException("Exception in inputFile (" + inputFile + ")", e);
+            } catch (IllegalStateException e) {
+                throw new IllegalStateException("Exception in inputFile (" + inputFile + ")", e);
+            }
+        } catch (IOException e) {
+            throw new IllegalArgumentException("Could not read the file (" + inputFile.getName() + ").", e);
+        } finally {
+            IOUtils.closeQuietly(in);
+        }
+        logger.info("Imported: {}", inputFile);
+        return solution;
+    }
+
+    public static abstract class XslxInputBuilder extends InputBuilder {
+
+        protected File inputFile;
+        protected XSSFWorkbook workbook;
+
+        public void setInputFile(File inputFile) {
+            this.inputFile = inputFile;
+        }
+
+        public void setWorkbook(XSSFWorkbook document) {
+            this.workbook = document;
+        }
+
+        public abstract Solution readSolution() throws IOException;
+
+        // ************************************************************************
+        // Helper methods
+        // ************************************************************************
+
+        public String getInputId() {
+            return FilenameUtils.getBaseName(inputFile.getPath());
+        }
+
+        protected XSSFSheet readSheet(int index, String name) {
+            XSSFSheet sheet = workbook.getSheetAt(index);
+            if (!sheet.getSheetName().equals(name)) {
+                throw new IllegalArgumentException("The sheet (" + sheet.getSheetName() + ") at index (" + index
+                        + ") is expected to have another name (" + name + ")");
+            }
+            return sheet;
+        }
+
+        protected void assertCellConstant(Cell cell, String constant) {
+            if (!constant.equals(cell.getStringCellValue())) {
+                throw new IllegalArgumentException("The cell (" + cell.getRow().getRowNum() + ","
+                        + cell.getColumnIndex() + ") with value (" + cell.getStringCellValue()
+                        + ") is expected to have the constant (" + constant + ")");
+            }
+        }
+
+        protected long readLongCell(Cell cell) {
+            double d = cell.getNumericCellValue();
+            long l = (long) d;
+            if (d - (double) l != 0.0) {
+                throw new IllegalArgumentException("The keyCell (" + cell.getRow().getRowNum() + ","
+                        + cell.getColumnIndex() + ") with value (" + d + ") is expected to be a long.");
+            }
+            return l;
+        }
+
+        protected double 
