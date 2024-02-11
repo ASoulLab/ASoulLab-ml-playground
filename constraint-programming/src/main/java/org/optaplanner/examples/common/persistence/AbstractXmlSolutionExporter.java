@@ -67,4 +67,22 @@ public abstract class AbstractXmlSolutionExporter extends AbstractSolutionExport
         logger.info("Exported: {}", outputFile);
     }
 
-    public static abst
+    public static abstract class XmlOutputBuilder extends OutputBuilder {
+
+        protected Document document;
+
+        public void setDocument(Document document) {
+            this.document = document;
+        }
+
+        public abstract void setSolution(Solution solution);
+
+        public abstract void writeSolution() throws IOException, JDOMException;
+
+        // ************************************************************************
+        // Helper methods
+        // ************************************************************************
+
+    }
+
+}
