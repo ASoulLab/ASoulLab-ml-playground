@@ -60,4 +60,59 @@ public abstract class SolutionPanel extends JPanel implements Scrollable {
     }
 
     public boolean isWrapInScrollPane() {
-        ret
+        return true;
+    }
+
+    public boolean isRefreshScreenDuringSolving() {
+        return false;
+    }
+
+    public abstract void resetPanel(Solution solution);
+
+    public void updatePanel(Solution solution) {
+        resetPanel(solution);
+    }
+
+    public Dimension getPreferredScrollableViewportSize() {
+        return PREFERRED_SCROLLABLE_VIEWPORT_SIZE;
+    }
+
+    public int getScrollableUnitIncrement(Rectangle visibleRect, int orientation, int direction) {
+        return 20;
+    }
+
+    public int getScrollableBlockIncrement(Rectangle visibleRect, int orientation, int direction) {
+        return 20;
+    }
+
+    public boolean getScrollableTracksViewportWidth() {
+        if (getParent() instanceof JViewport) {
+            return (((JViewport) getParent()).getWidth() > getPreferredSize().width);
+        }
+        return false;
+    }
+
+    public boolean getScrollableTracksViewportHeight() {
+        if (getParent() instanceof JViewport) {
+            return (((JViewport) getParent()).getHeight() > getPreferredSize().height);
+        }
+        return false;
+    }
+
+    public void doProblemFactChange(ProblemFactChange problemFactChange) {
+        doProblemFactChange(problemFactChange, false);
+    }
+
+    public void doProblemFactChange(ProblemFactChange problemFactChange, boolean reset) {
+        solutionBusiness.doProblemFactChange(problemFactChange);
+        Solution solution = solutionBusiness.getSolution();
+        if (reset) {
+            resetPanel(solution);
+        } else {
+            updatePanel(solution);
+        }
+        validate();
+        solverAndPersistenceFrame.refreshScoreField(solution);
+    }
+
+}
