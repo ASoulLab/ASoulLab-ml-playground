@@ -60,4 +60,108 @@ public class TimeTablePanel<XObject, YObject> extends JPanel implements Scrollab
 
     public void defineColumnHeader(XObject xObject, int width) {
         int x = layout.addColumn(width);
-        xMap.put(x
+        xMap.put(xObject, x);
+    }
+
+    public void defineRowHeaderByKey(HeaderRowKey yObject) {
+        int y = layout.addRow();
+        yMap.put(yObject, y);
+    }
+
+    public void defineRowHeader(YObject yObject) {
+        int y = layout.addRow();
+        yMap.put(yObject, y);
+    }
+
+    public void defineRowHeader(YObject yObject, int height) {
+        int y = layout.addRow(height);
+        yMap.put(yObject, y);
+    }
+
+    // ************************************************************************
+    // Add methods
+    // ************************************************************************
+
+    public void addCornerHeader(HeaderColumnKey xObject, HeaderRowKey yObject, JComponent component) {
+        int x = xMap.get(xObject);
+        int y = yMap.get(yObject);
+        add(component, new TimeTableLayoutConstraints(x, y, true));
+    }
+
+    public void addColumnHeader(XObject xObject, HeaderRowKey yObject, JComponent component) {
+        int x = xMap.get(xObject);
+        int y = yMap.get(yObject);
+        add(component, new TimeTableLayoutConstraints(x, y, true));
+    }
+
+    public void addColumnHeader(XObject xObject1, HeaderRowKey yObject1, XObject xObject2, HeaderRowKey yObject2,
+            JComponent component) {
+        int x1 = xMap.get(xObject1);
+        int y1 = yMap.get(yObject1);
+        int x2 = xMap.get(xObject2);
+        int y2 = yMap.get(yObject2);
+        add(component, new TimeTableLayoutConstraints(x1, y1, x2 - x1 + 1, y2 - y1 + 1, true));
+    }
+
+    public void addRowHeader(HeaderColumnKey xObject, YObject yObject, JComponent component) {
+        int x = xMap.get(xObject);
+        int y = yMap.get(yObject);
+        add(component, new TimeTableLayoutConstraints(x, y, true));
+    }
+
+    public void addRowHeader(HeaderColumnKey xObject1, YObject yObject1, HeaderColumnKey xObject2, YObject yObject2,
+            JComponent component) {
+        int x1 = xMap.get(xObject1);
+        int y1 = yMap.get(yObject1);
+        int x2 = xMap.get(xObject2);
+        int y2 = yMap.get(yObject2);
+        add(component, new TimeTableLayoutConstraints(x1, y1, x2 - x1 + 1, y2 - y1 + 1, true));
+    }
+
+    public void addCell(XObject xObject, YObject yObject, JComponent component) {
+        int x = xMap.get(xObject);
+        int y = yMap.get(yObject);
+        add(component, new TimeTableLayoutConstraints(x, y));
+    }
+
+    public void addCell(XObject xObject1, YObject yObject1, XObject xObject2, YObject yObject2, JComponent component) {
+        int x1 = xMap.get(xObject1);
+        int y1 = yMap.get(yObject1);
+        int x2 = xMap.get(xObject2);
+        int y2 = yMap.get(yObject2);
+        add(component, new TimeTableLayoutConstraints(x1, y1, x2 - x1 + 1, y2 - y1 + 1));
+    }
+
+    // ************************************************************************
+    // Scrollable methods
+    // ************************************************************************
+
+    public Dimension getPreferredScrollableViewportSize() {
+        return SolutionPanel.PREFERRED_SCROLLABLE_VIEWPORT_SIZE;
+    }
+
+    public int getScrollableUnitIncrement(Rectangle visibleRect, int orientation, int direction) {
+        return 20;
+    }
+
+    public int getScrollableBlockIncrement(Rectangle visibleRect, int orientation, int direction) {
+        return 20;
+    }
+
+    public boolean getScrollableTracksViewportWidth() {
+        if (getParent() instanceof JViewport) {
+            return (((JViewport) getParent()).getWidth() > getPreferredSize().width);
+        }
+        return false;
+    }
+
+    public boolean getScrollableTracksViewportHeight() {
+        if (getParent() instanceof JViewport) {
+            return (((JViewport) getParent()).getHeight() > getPreferredSize().height);
+        }
+        return false;
+    }
+
+    public enum HeaderColumnKey {
+        HEADER_COLUMN_GROUP2,
+        HEADER_COLUM
