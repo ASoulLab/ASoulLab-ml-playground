@@ -119,4 +119,83 @@
     <name>Examination Tabu Search ${randomType}</name>
     <problemBenchmarks>
       <xStreamAnnotatedClass>org.optaplanner.examples.examination.domain.Examination</xStreamAnnotatedClass>
-      <inpu
+      <inputSolutionFile>data/examination/unsolved/exam_comp_set2.xml</inputSolutionFile>
+      <inputSolutionFile>data/examination/unsolved/exam_comp_set3.xml</inputSolutionFile>
+    </problemBenchmarks>
+    <solver>
+      <solutionClass>org.optaplanner.examples.examination.domain.Examination</solutionClass>
+      <entityClass>org.optaplanner.examples.examination.domain.Exam</entityClass>
+      <entityClass>org.optaplanner.examples.examination.domain.LeadingExam</entityClass>
+      <entityClass>org.optaplanner.examples.examination.domain.FollowingExam</entityClass>
+      <randomType>${randomType}</randomType>
+      <scoreDirectorFactory>
+        <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
+        <scoreDrl>org/optaplanner/examples/examination/solver/examinationScoreRules.drl</scoreDrl>
+      </scoreDirectorFactory>
+      <constructionHeuristic>
+        <queuedEntityPlacer>
+          <entitySelector id="placerEntitySelector">
+            <entityClass>org.optaplanner.examples.examination.domain.Exam</entityClass>
+            <cacheType>PHASE</cacheType>
+            <selectionOrder>SORTED</selectionOrder>
+            <sorterManner>DECREASING_DIFFICULTY</sorterManner>
+          </entitySelector>
+          <cartesianProductMoveSelector>
+            <changeMoveSelector>
+              <entitySelector mimicSelectorRef="placerEntitySelector"/>
+              <valueSelector>
+                <downcastEntityClass>org.optaplanner.examples.examination.domain.LeadingExam</downcastEntityClass>
+                <variableName>period</variableName>
+                <cacheType>PHASE</cacheType>
+                <!--<selectionOrder>SORTED</selectionOrder>-->
+                <!--<sorterManner>INCREASING_STRENGTH</sorterManner>-->
+              </valueSelector>
+            </changeMoveSelector>
+            <changeMoveSelector>
+              <entitySelector mimicSelectorRef="placerEntitySelector"/>
+              <valueSelector>
+                <variableName>room</variableName>
+                <cacheType>PHASE</cacheType>
+                <selectionOrder>SORTED</selectionOrder>
+                <sorterManner>INCREASING_STRENGTH</sorterManner>
+              </valueSelector>
+            </changeMoveSelector>
+          </cartesianProductMoveSelector>
+        </queuedEntityPlacer>
+      </constructionHeuristic>
+      <localSearch>
+        <unionMoveSelector>
+          <cartesianProductMoveSelector>
+            <changeMoveSelector>
+              <entitySelector id="cartesianProductEntitySelector">
+                <entityClass>org.optaplanner.examples.examination.domain.Exam</entityClass>
+              </entitySelector>
+              <valueSelector>
+                <variableName>room</variableName>
+              </valueSelector>
+            </changeMoveSelector>
+            <changeMoveSelector>
+              <entitySelector mimicSelectorRef="cartesianProductEntitySelector"/>
+              <valueSelector>
+                <downcastEntityClass>org.optaplanner.examples.examination.domain.LeadingExam</downcastEntityClass>
+                <variableName>period</variableName>
+              </valueSelector>
+            </changeMoveSelector>
+          </cartesianProductMoveSelector>
+          <swapMoveSelector>
+            <entitySelector>
+              <entityClass>org.optaplanner.examples.examination.domain.LeadingExam</entityClass>
+            </entitySelector>
+          </swapMoveSelector>
+        </unionMoveSelector>
+        <acceptor>
+          <entityTabuSize>10</entityTabuSize>
+        </acceptor>
+        <forager>
+          <acceptedCountLimit>2000</acceptedCountLimit>
+        </forager>
+      </localSearch>
+    </solver>
+  </solverBenchmark>
+  <solverBenchmark>
+    <name>Nurse Rostering Tabu Search ${randomT
