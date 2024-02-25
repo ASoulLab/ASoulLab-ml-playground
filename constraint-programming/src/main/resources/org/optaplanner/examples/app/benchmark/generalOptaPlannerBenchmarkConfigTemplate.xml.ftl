@@ -273,4 +273,8 @@
         <forager>
           <!-- Real world problems require to use of <acceptedCountLimit> -->
         </forager>
-      </loca
+      </localSearch>
+    </solver>
+  </solverBenchmark>
+</#list>
+</plannerBenchmark>
