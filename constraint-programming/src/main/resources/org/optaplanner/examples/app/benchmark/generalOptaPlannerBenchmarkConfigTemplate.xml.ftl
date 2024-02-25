@@ -198,4 +198,79 @@
     </solver>
   </solverBenchmark>
   <solverBenchmark>
-    <name>Nurse Rostering Tabu Search ${randomT
+    <name>Nurse Rostering Tabu Search ${randomType}</name>
+    <problemBenchmarks>
+      <xStreamAnnotatedClass>org.optaplanner.examples.nurserostering.domain.NurseRoster</xStreamAnnotatedClass>
+      <inputSolutionFile>data/nurserostering/unsolved/medium01.xml</inputSolutionFile>
+      <inputSolutionFile>data/nurserostering/unsolved/medium_hint01.xml</inputSolutionFile>
+    </problemBenchmarks>
+    <solver>
+      <solutionClass>org.optaplanner.examples.nurserostering.domain.NurseRoster</solutionClass>
+      <entityClass>org.optaplanner.examples.nurserostering.domain.ShiftAssignment</entityClass>
+      <randomType>${randomType}</randomType>
+      <scoreDirectorFactory>
+        <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
+        <scoreDrl>org/optaplanner/examples/nurserostering/solver/nurseRosteringScoreRules.drl</scoreDrl>
+      </scoreDirectorFactory>
+      <constructionHeuristic>
+        <constructionHeuristicType>WEAKEST_FIT</constructionHeuristicType>
+      </constructionHeuristic>
+      <localSearch>
+        <unionMoveSelector>
+          <moveListFactory>
+            <cacheType>PHASE</cacheType>
+            <moveListFactoryClass>org.optaplanner.examples.nurserostering.solver.move.factory.EmployeeChangeMoveFactory</moveListFactoryClass>
+          </moveListFactory>
+          <moveListFactory>
+            <cacheType>PHASE</cacheType>
+            <moveListFactoryClass>org.optaplanner.examples.nurserostering.solver.move.factory.ShiftAssignmentSwapMoveFactory</moveListFactoryClass>
+          </moveListFactory>
+          <moveListFactory>
+            <cacheType>STEP</cacheType>
+            <moveListFactoryClass>org.optaplanner.examples.nurserostering.solver.move.factory.ShiftAssignmentPillarPartSwapMoveFactory</moveListFactoryClass>
+          </moveListFactory>
+        </unionMoveSelector>
+        <acceptor>
+          <entityTabuSize>7</entityTabuSize>
+        </acceptor>
+        <forager>
+          <acceptedCountLimit>800</acceptedCountLimit>
+        </forager>
+      </localSearch>
+    </solver>
+  </solverBenchmark>
+  <solverBenchmark>
+    <name>TravelingTournament Tabu Search ${randomType}</name>
+    <problemBenchmarks>
+      <xStreamAnnotatedClass>org.optaplanner.examples.travelingtournament.domain.TravelingTournament</xStreamAnnotatedClass>
+      <inputSolutionFile>data/travelingtournament/unsolved/1-nl14.xml</inputSolutionFile>
+    </problemBenchmarks>
+    <solver>
+      <solutionClass>org.optaplanner.examples.travelingtournament.domain.TravelingTournament</solutionClass>
+      <entityClass>org.optaplanner.examples.travelingtournament.domain.Match</entityClass>
+      <randomType>${randomType}</randomType>
+      <scoreDirectorFactory>
+        <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
+        <scoreDrl>org/optaplanner/examples/travelingtournament/solver/travelingTournamentScoreRules.drl</scoreDrl>
+      </scoreDirectorFactory>
+      <localSearch>
+        <unionMoveSelector>
+          <swapMoveSelector>
+            <cacheType>PHASE</cacheType>
+            <selectionOrder>SHUFFLED</selectionOrder>
+            <filterClass>org.optaplanner.examples.travelingtournament.solver.move.factory.InverseMatchSwapMoveFilter</filterClass>
+          </swapMoveSelector>
+          <moveListFactory>
+            <cacheType>STEP</cacheType>
+            <selectionOrder>SHUFFLED</selectionOrder>
+            <moveListFactoryClass>org.optaplanner.examples.travelingtournament.solver.move.factory.MatchChainRotationsMoveFactory</moveListFactoryClass>
+          </moveListFactory>
+        </unionMoveSelector>
+        <acceptor>
+          <solutionTabuSize>1500</solutionTabuSize>
+          <moveTabuSize>7</moveTabuSize>
+        </acceptor>
+        <forager>
+          <!-- Real world problems require to use of <acceptedCountLimit> -->
+        </forager>
+      </loca
