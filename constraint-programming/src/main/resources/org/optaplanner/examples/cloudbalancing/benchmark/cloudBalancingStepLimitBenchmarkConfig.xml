@@ -33,4 +33,14 @@
           <swapMoveSelector/>
           <pillarChangeMoveSelector/>
           <pillarSwapMoveSelector/>
-      
+        </unionMoveSelector>
+        <acceptor>
+          <entityTabuSize>7</entityTabuSize>
+        </acceptor>
+        <forager>
+          <acceptedCountLimit>1000</acceptedCountLimit>
+        </forager>
+      </localSearch>
+    </solver>
+  </solverBenchmark>
+</plannerBenchmark>
