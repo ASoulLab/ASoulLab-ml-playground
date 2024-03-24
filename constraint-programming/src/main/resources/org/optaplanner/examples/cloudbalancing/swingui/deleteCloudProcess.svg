@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -15,9 +16,9 @@
    inkscape:version="0.48.3.1 r9886"
    width="16"
    height="16"
-   sodipodi:docname="cloudProcess.svg"
+   sodipodi:docname="deleteCloudProcess.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   inkscape:export-filename="cloudProcess.png"
+   inkscape:export-filename="deleteCloudProcess.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
    version="1.1">
@@ -48,27 +49,6 @@
   </metadata>
   <defs
      id="defs5">
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient7916"
-       id="linearGradient3041"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-1.9043922e-7,16.000001)"
-       x1="16.874998"
-       y1="22.851799"
-       x2="27.900846"
-       y2="34.976799" />
-    <linearGradient
-       id="linearGradient7916">
-      <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
-         offset="0"
-         id="stop7918" />
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0.34020618;"
-         offset="1.0000000"
-         id="stop7920" />
-    </linearGradient>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#aigrd1"
@@ -108,10 +88,10 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:zoom="25.28125"
-     inkscape:cx="13.993626"
-     inkscape:cy="11.191852"
-     inkscape:window-x="0"
+     inkscape:zoom="32"
+     inkscape:cx="9.9387365"
+     inkscape:cy="10.286794"
+     inkscape:window-x="1680"
      inkscape:window-y="27"
      inkscape:current-layer="svg2"
      inkscape:grid-points="true"
@@ -122,7 +102,7 @@
      showgrid="true"
      inkscape:window-maximized="1" />
   <g
-     transform="matrix(0.32548797,0,0,0.32548797,0.22897716,0.3917324)"
+     transform="matrix(0.32548797,0,0,0.32548797,0.22897716,0.39173275)"
      id="g3028">
     <path
        inkscape:connector-curvature="0"
@@ -166,5 +146,26 @@
        id="path3770"
        d="m 37.236641,17.217754 c -0.383781,0.181376 -0.746638,0.385755 -1.113405,0.595541 l 0.56965,1.734841 c -0.697094,0.4223 -1.35473,0.919689 -1.967878,1.450015 l -1.475909,-1.087512 c -0.380086,0.345899 -0.741772,0.707584 -1.087511,1.087512 l 1.087511,1.475908 c -0.530326,0.613312 -1.027552,1.270943 -1.450015,1.967878 l -0.543756,-0.181252 c -0.04768,0.700283 -0.236379,1.361485 -0.517862,1.967878 l 0.103572,0.07768 c -0.313157,0.74268 -0.564548,1.530398 -0.750901,2.330382 l -1.475908,0 c -0.136283,0.08545 -0.270553,0.18506 -0.414291,0.258931 -0.07837,0.415267 -0.134912,0.817326 -0.181251,1.242871 l 1.760733,0.569648 c -0.03339,0.401276 -0.05179,0.807195 -0.05179,1.216978 -2e-6,0.409941 0.0184,0.815701 0.05179,1.216977 l -1.760733,0.569648 c 0.05602,0.514755 0.129991,1.02867 0.233038,1.527695 l 1.838412,-0.02589 c 0.128118,0.549987 0.303065,1.107439 0.49197,1.631267 0.744916,-0.28728 1.473833,-0.630185 2.149129,-1.035725 -0.411587,-1.216041 -0.647328,-2.529108 -0.647328,-3.883969 10e-7,-5.197933 3.292381,-9.636655 7.897405,-11.341191 l -1.087511,-0.181253 c -0.222788,-0.822662 -0.511324,-1.628591 -0.880367,-2.382167 -0.01085,-0.02216 -0.01492,-0.05558 -0.02589,-0.07768 l -0.05179,-0.05179 -0.699115,-0.673221 z"
        style="opacity:0.5;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible" />
+  </g>
+  <g
+     id="g2254"
+     transform="matrix(1.0451787,0,0,1.0451787,-5.5873231,-30.671612)"
+     inkscape:r_cx="true"
+     inkscape:r_cy="true"
+     style="stroke:#a40000;stroke-width:1.91354835;stroke-miterlimit:4;stroke-dasharray:none">
+    <path
+       inkscape:r_cy="true"
+       inkscape:r_cx="true"
+       id="path1377"
+       d="M 8,32 18,42"
+       style="color:#000000;fill:none;stroke:#a40000;stroke-width:1.91354835;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
+       inkscape:connector-curvature="0" />
+    <path
+       style="color:#000000;fill:none;stroke:#a40000;stroke-width:1.91354835;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
+       d="M 18,32 8,42"
+       id="path2252"
+       inkscape:r_cx="true"
+       inkscape:r_cy="true"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
