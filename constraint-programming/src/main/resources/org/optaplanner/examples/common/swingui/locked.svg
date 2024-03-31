@@ -214,4 +214,59 @@
        y2="12.621321"
        gradientUnits="userSpaceOnUse" />
     <radialGradient
-       inkscape:co
+       inkscape:collect="always"
+       xlink:href="#aigrd2"
+       id="radialGradient3852"
+       cx="-3.1020749"
+       cy="1.7363698"
+       fx="-3.1020749"
+       fy="1.7363698"
+       r="4"
+       gradientTransform="matrix(0.95255526,0.90127397,-2.0579542,2.1750488,9.5507916,-0.5623596)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-height="991"
+     inkscape:window-width="1680"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="22.627417"
+     inkscape:cx="10.743793"
+     inkscape:cy="9.3360443"
+     inkscape:window-x="1680"
+     inkscape:window-y="27"
+     inkscape:current-layer="svg2"
+     inkscape:grid-points="true"
+     inkscape:object-nodes="true"
+     inkscape:guide-points="true"
+     inkscape:object-points="true"
+     inkscape:object-bbox="true"
+     showgrid="true"
+     inkscape:window-maximized="1" />
+  <g
+     id="g3812"
+     transform="translate(0.99999666,0.28661263)">
+    <path
+       style="fill:none;stroke:url(#radialGradient3852);stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 4,7.2187504 c 0,0 0,-1.7569843 0,-2.8141598 0,-3.3207391 6,-3.2867261 6,0 0,1.2356676 0,2.5954098 0,2.5954098"
+       id="path4564"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssc" />
+    <rect
+       ry="1"
+       rx="1"
+       style="fill:url(#linearGradient3822);fill-opacity:1;stroke:#8f5902;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4562"
+       width="10"
+       height="7"
+       x="2.0000033"
+       y="7" />
+  </g>
+</svg>
