@@ -669,4 +669,60 @@
             <dc:title>www.optaplanner.org</dc:title>
           </cc:Agent>
         </dc:creator>
-    
+        <dc:title></dc:title>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>www.optaplanner.org</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:language>en</dc:language>
+        <cc:license
+           rdf:resource="http://www.optaplanner.org/code/license.html" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     style="display:inline"
+     inkscape:r_cx="true"
+     inkscape:r_cy="true">
+    <path
+       style="opacity:0.15;color:#000000;fill:none;stroke:url(#linearGradient3085);stroke-width:0.74999982;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
+       d="m 4.0632155,3.8462645 0,8.3074715 7.8735695,0 0,-8.3074715 -7.8735695,0 z"
+       id="path2815"
+       inkscape:r_cx="true"
+       inkscape:r_cy="true"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:r_cy="true"
+       inkscape:r_cx="true"
+       style="color:#000000;fill:url(#radialGradient3082);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible"
+       d="m 4.25,4.0625 0,7.875 7.5,0 0,-7.875 -7.5,0 z"
+       id="path2827"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:r_cy="true"
+       inkscape:r_cx="true"
+       id="path2762"
+       d="m 4.251674,4.045238 0,7.909524 7.496652,0 0,-7.909524 -7.496652,0 z"
+       style="color:#000000;fill:none;stroke:url(#linearGradient3079);stroke-width:0.37499982;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:r_cy="true"
+       inkscape:r_cx="true"
+       style="color:#000000;fill:none;stroke:url(#linearGradient3076);stroke-width:0.37499991;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible"
+       d="m 4.624778,4.4375 0,7.125 6.750444,0 0,-7.125 -6.750444,0 z"
+       id="path2811"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:0.5;color:#000000;fill:#f7f7f7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:block;overflow:visible"
+       d="m 4.8125006,4.5642215 0,3.958965 6.3749994,-1.046373 0,-2.9457375 -6.3749994,0.03315 z"
+       id="path2479"
+       inkscape:r_cx="true"
+       inkscape:r_cy="true"
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
