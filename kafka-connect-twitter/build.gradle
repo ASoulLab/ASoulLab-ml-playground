@@ -7,4 +7,18 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-    j
+    jcenter()
+    maven {
+        name "jebrains-all"
+        url "http://repository.jetbrains.com/all"
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    compile "org.apache.kafka:connect-api:$kafkaVersion"
+    compile "com.twitter:hbc-twitter4j:$hosebirdVersion"
+
+    testCompile "com.nhaarman:mockito-kotlin:$mockitoKotlinVersion"
+    testCompile "org.jetbrains.spek:spek:$spekVersion"
+}
