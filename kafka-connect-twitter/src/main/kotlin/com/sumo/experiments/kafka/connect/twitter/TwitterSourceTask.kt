@@ -106,4 +106,53 @@ class TwitterSourceTask : SourceTask() {
                 }
 
                 override fun onStatus(status: Status) {
-//                    log.debug("------------StatusListener-----onStatus-
+//                    log.debug("------------StatusListener-----onStatus----Start-----------");
+//                    log.debug("id: ${status.id}, createdAt: ${status.createdAt}, lang: ${status.lang}, ${status.place}");
+//                    log.debug("text: ${status.text}");
+//                    log.debug("user: ${status.user.id}, ${status.user.name}, ${status.user.screenName}");
+//                    log.debug("------------StatusListener-----onStatus-----End-----------");
+                    statusQueue.put(status)
+
+                }
+
+            }),
+            Executors.newFixedThreadPool(1)
+        )
+
+        twitterStatusClient.connect()
+        twitterStatusClient.process()
+    }
+
+    override fun stop() {
+        log.info("Stopping Twitter client")
+        // Print some stats
+        log.info("""Twitter Client Stats:
+        numMessages: ${twitterStatusClient.statsTracker.numMessages}
+        numMessagesDropped: ${twitterStatusClient.statsTracker.numMessagesDropped}
+        num200s: ${twitterStatusClient.statsTracker.num200s}
+        num400s: ${twitterStatusClient.statsTracker.num400s}
+        num500s: ${twitterStatusClient.statsTracker.num500s}
+        numClientEventsDropped: ${twitterStatusClient.statsTracker.numClientEventsDropped}
+        numConnectionFailures: ${twitterStatusClient.statsTracker.numConnectionFailures}
+        numConnects: ${twitterStatusClient.statsTracker.numConnects}
+        numDisconnects: ${twitterStatusClient.statsTracker.numDisconnects}
+                    """)
+        twitterStatusClient.stop()
+        rawQueue.clear();
+        statusQueue.clear();
+    }
+
+    override fun poll(): List<SourceRecord> {
+        if (twitterStatusClient.isDone)
+            log.warn("Client connection closed unexpectedly: ") //twitterBasicClient.exitEvent.message TODO: what next?
+        val l = mutableListOf<Status>()
+        statusQueue.drainWithTimeoutTo(l, batchSize, (batchTimeout * 1E9).toLong(), TimeUnit.NANOSECONDS)
+        return l.map({
+            when (statusConverter) {
+                TwitterSourceConfig.OUTPUT_FORMAT_ENUM_STRING -> statusToStringKeyValue(it, topic)
+                else -> statusToTwitterStatusStructure(it, topic)
+            }
+        })
+    }
+
+}
