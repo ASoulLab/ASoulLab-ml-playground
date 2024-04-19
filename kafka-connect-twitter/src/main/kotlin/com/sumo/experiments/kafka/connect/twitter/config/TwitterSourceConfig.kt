@@ -85,4 +85,24 @@ class TwitterSourceConfig(props: Map<String, String>) : AbstractConfig(config, p
                 if (!locations.isEmpty()) {
                     if ((locations.size % 4) != 0) {
                         log.error("${TRACK_LOCATIONS} should have number of elements divisible by 4!")
-                        throw Ru
+                        throw RuntimeException("${TRACK_LOCATIONS} should have number of elements divisible by 4!")
+                    }
+                    try {
+                        locations.map { x -> x.trim().toDouble() }
+                    } catch (e: NumberFormatException) {
+                        log.error("You should use double numbers in ${TRACK_LOCATIONS}")
+                        throw RuntimeException("You should use double numbers in ${TRACK_LOCATIONS}")
+                    }
+                }
+                try {
+                    users.map { x -> x.trim().toLong() }
+                } catch (e: NumberFormatException) {
+                    log.error("You should use numeric user IDs in ${TRACK_FOLLOW}")
+                    throw RuntimeException("You should use numeric user IDs in ${TRACK_FOLLOW}")
+                }
+            }
+
+            else -> throw RuntimeException("Unknown value for ${STREAM_TYPE} parameter")
+        }
+    }
+}
