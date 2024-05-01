@@ -21,4 +21,16 @@ Neural Networks Demos
 
 ###  Setup
 ```bash
-npm inst
+npm install
+```
+
+###  Run
+```bash
+npm start
+npm run start1
+```
+
+Reference
+ - http://blog.webkid.io/neural-networks-in-javascript/
+ - http://synaptic.juancazala.Perceptroncom/#/
+ - https://github.com/cazala/mnist
